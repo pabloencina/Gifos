@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { FlatList, Text, View } from "react-native";
 import AppBar from "../AppBar/AppBar";
 import CardGift from "../CardsGift/CardGift";
 import Home from "../Home-Inicio/Home";

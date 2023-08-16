@@ -1,14 +1,16 @@
 import React from "react";
-import { Text } from "react-native";
+import { Text, View } from "react-native";
 import AppBar from "../AppBar/AppBar";
 import CardGift from "../CardsGift/CardGift";
+import Home from "../Home-Inicio/Home";
 
 const Main = () => {
   return (
-    <Text>
+    <View>
       <AppBar />
+      <Home />
       <CardGift />
-    </Text>
+    </View>
   );
 };
 

@@ -3,7 +3,7 @@ import imageGift from "../Images/image.jpg";
 const gifts = [
   {
     id: 1,
-    name: "Gift 1",
+    name: "Gift 1 color color color color",
     image: imageGift,
   },
   {
@@ -18,7 +18,7 @@ const gifts = [
   },
   {
     id: 4,
-    name: "Gift 4",
+    name: "Gift 1 color color color color views color amarillo",
     image: imageGift,
   },
   {

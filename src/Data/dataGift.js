@@ -1,4 +1,4 @@
-import imageGift from "../Images/image.jpg";
+import imageGift from "../Assets/Images/image.jpg";
 
 const gifts = [
   {

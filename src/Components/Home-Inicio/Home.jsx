@@ -5,22 +5,29 @@ import Search from "./Search";
 import Trending from "./Trending";
 import TrendingGifos from "./TrendingGifos";
 
-const Home = () => {
+const Home = ({ customFontMontserrat, customFont }) => {
   return (
     <ScrollView>
       <View style={styles.container}>
-        <Text style={styles.text}>Inspirate, busca, guarda,</Text>
-        <Text style={styles.text}>
-          y crea los mejores <Text style={styles.colorGifos}>GIFOS</Text>
+        <Text style={[styles.text, { fontFamily: customFontMontserrat }]}>
+          Inspirate, busca, guarda,
+        </Text>
+        <Text style={[styles.text, { fontFamily: customFontMontserrat }]}>
+          y crea los mejores{" "}
+          <Text
+            style={[styles.colorGifos, { fontFamily: customFontMontserrat }]}
+          >
+            GIFOS
+          </Text>
         </Text>
         <Image
           style={styles.image}
-          source={require("../../Images/Image-principal.png")}
+          source={require("../../Assets/Images/Image-principal.png")}
         />
         <Search />
 
-        <Trending />
-        <TrendingGifos />
+        <Trending customFont={customFont} />
+        <TrendingGifos customFont={customFont} />
       </View>
     </ScrollView>
   );
@@ -46,5 +53,6 @@ const styles = StyleSheet.create({
   },
   colorGifos: {
     color: theme.color.secondary,
+    fontWeight: theme.fontWeights.bold,
   },
 });

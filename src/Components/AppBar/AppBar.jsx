@@ -2,13 +2,18 @@ import React from "react";
 import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
 import theme from "../../Styles/Theme/theme";
 
-const AppBar = () => {
+const AppBar = ({ customFont }) => {
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={require("../../Images/image.jpg")} />
+      <Image
+        style={styles.image}
+        source={require("../../Assets/Images/image.jpg")}
+      />
 
-      <Text style={styles.text}>Modo Nocturno</Text>
-      <Text style={styles.text}>Favoritos</Text>
+      <Text style={[styles.text, { fontFamily: customFont }]}>
+        Modo Nocturno
+      </Text>
+      <Text style={[styles.text, { fontFamily: customFont }]}>Favoritos</Text>
     </View>
   );
 };
@@ -31,7 +36,7 @@ const styles = StyleSheet.create({
   text: {
     color: theme.color.whiteColor,
     fontSize: theme.fontSizes.text,
-    //fontFamily: theme.fonts.main,
+    fontWeight: theme.fontWeights.bold,
   },
   image: {
     width: 50,

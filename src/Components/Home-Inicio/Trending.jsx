@@ -2,11 +2,11 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import theme from "../../Styles/Theme/theme";
 
-const Trending = () => {
+const Trending = ({ customFont }) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Trending:</Text>
-      <Text style={styles.text}>
+      <Text style={[styles.title, { fontFamily: customFont }]}>Trending:</Text>
+      <Text style={[styles.text, { fontFamily: customFont }]}>
         Anthony Davis, Kodak Black, Michel Jackson, Bust, Scammers, Autumn, Rat,
         Grinch, Picture, Chair, Sweet Dreams, Show.{" "}
       </Text>

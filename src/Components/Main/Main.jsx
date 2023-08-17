@@ -5,13 +5,16 @@ import CardGift from "../CardsGift/CardGift";
 import Home from "../Home-Inicio/Home";
 import Footer from "../Footer/Footer";
 
-const Main = () => {
+const Main = ({ customFont, customFontMontserrat }) => {
   return (
     <View>
-      <AppBar />
-      <Home />
+      <AppBar customFont={customFont} />
+      <Home
+        customFontMontserrat={customFontMontserrat}
+        customFont={customFont}
+      />
       {/* <CardGift /> */}
-      <Footer />
+      <Footer customFontMontserrat={customFontMontserrat} />
     </View>
   );
 };

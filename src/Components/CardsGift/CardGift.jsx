@@ -20,7 +20,7 @@ const CardGift = () => {
           <View style={styles.container} key={gift.id}>
             <Image
               style={styles.image}
-              source={require("../../Images/image.jpg")}
+              source={require("../../Assets/Images/image.jpg")}
             />
             <Text style={styles.text}>{gift.name}</Text>
           </View>

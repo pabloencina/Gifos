@@ -10,12 +10,12 @@ const theme = {
     blackColor: "#000",
   },
   fontSizes: {
-    text: 14,
-    title: 16,
-    title2: 20,
+    text: 16,
+    title: 18,
+    title2: 26,
   },
   fonts: {
-    //main: "system",
+    main: "Montserrat",
   },
   fontWeights: {
     normal: "400",

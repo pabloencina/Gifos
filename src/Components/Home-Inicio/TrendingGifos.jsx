@@ -3,12 +3,14 @@ import { FlatList, Image, StyleSheet, Text, View } from "react-native";
 import theme from "../../Styles/Theme/theme";
 import dataGift from "../../Data/dataGift";
 
-const TrendingGifos = () => {
+const TrendingGifos = ({ customFont }) => {
   return (
     <View style={{ flex: 1 }}>
       <View style={styles.containerText}>
-        <Text style={styles.title}>Trending GIFOS</Text>
-        <Text style={styles.text}>
+        <Text style={[styles.title, { fontFamily: customFont }]}>
+          Trending GIFOS
+        </Text>
+        <Text style={[styles.text, { fontFamily: customFont }]}>
           Mira los últimos GIFOS de nuestra comunidad.
         </Text>
       </View>
@@ -22,7 +24,7 @@ const TrendingGifos = () => {
             <View style={styles.container} key={gift.id}>
               <Image
                 style={styles.image}
-                source={require("../../Images/image.jpg")}
+                source={require("../../Assets/Images/image.jpg")}
               />
             </View>
           );

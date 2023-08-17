@@ -3,11 +3,15 @@ import { StyleSheet, Text, View } from "react-native";
 import theme from "../../Styles/Theme/theme";
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 
-const Footer = () => {
+const Footer = ({ customFontMontserrat }) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>&copy; GIFOS 2023 All Rights Reserved.</Text>
-      <Text style={styles.text2}>Compartir en:</Text>
+      <Text style={[styles.text, { fontFamily: customFontMontserrat }]}>
+        &copy; GIFOS 2023 All Rights Reserved.
+      </Text>
+      <Text style={[styles.text2, { fontFamily: customFontMontserrat }]}>
+        Compartir en:
+      </Text>
       <Text style={styles.textIcons}>
         {" "}
         <Text style={{ flex: 1 }}>
@@ -42,7 +46,7 @@ const styles = StyleSheet.create({
     fontSize: theme.fontSizes.text,
     justifyContent: "center",
     alignItems: "center",
-    width: 200,
+    width: 180,
   },
   icon: {
     color: theme.color.quaternary,
@@ -50,7 +54,8 @@ const styles = StyleSheet.create({
     width: 300,
   },
   text2: {
-    width: 80,
+    fontSize: theme.fontSizes.text,
+    width: 90,
     justifyContent: "center",
     alignItems: "center",
   },

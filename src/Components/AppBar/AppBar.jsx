@@ -2,7 +2,7 @@ import React from "react";
 import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
 import theme from "../../Styles/Theme/theme";
 
-const AppBar = ({ customFont }) => {
+const AppBar = ({ fontRoboto }) => {
   return (
     <View style={styles.container}>
       <Image
@@ -10,10 +10,10 @@ const AppBar = ({ customFont }) => {
         source={require("../../Assets/Images/image.jpg")}
       />
 
-      <Text style={[styles.text, { fontFamily: customFont }]}>
+      <Text style={[styles.text, { fontFamily: fontRoboto }]}>
         Modo Nocturno
       </Text>
-      <Text style={[styles.text, { fontFamily: customFont }]}>Favoritos</Text>
+      <Text style={[styles.text, { fontFamily: fontRoboto }]}>Favoritos</Text>
     </View>
   );
 };

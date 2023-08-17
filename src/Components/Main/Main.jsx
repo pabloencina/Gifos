@@ -1,20 +1,17 @@
 import React from "react";
-import { FlatList, Text, View } from "react-native";
+import { View } from "react-native";
 import AppBar from "../AppBar/AppBar";
 import CardGift from "../CardsGift/CardGift";
 import Home from "../Home-Inicio/Home";
 import Footer from "../Footer/Footer";
 
-const Main = ({ customFont, customFontMontserrat }) => {
+const Main = ({ fontRoboto, fontMontserrat }) => {
   return (
     <View>
-      <AppBar customFont={customFont} />
-      <Home
-        customFontMontserrat={customFontMontserrat}
-        customFont={customFont}
-      />
-      {/* <CardGift /> */}
-      <Footer customFontMontserrat={customFontMontserrat} />
+      <AppBar fontRoboto={fontRoboto} />
+      <Home fontRoboto={fontRoboto} fontMontserrat={fontMontserrat} />
+      {/* <CardGift fontRoboto={fontRoboto} /> */}
+      <Footer fontMontserrat={fontMontserrat} />
     </View>
   );
 };

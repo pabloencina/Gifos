@@ -3,13 +3,13 @@ import { StyleSheet, Text, View } from "react-native";
 import theme from "../../Styles/Theme/theme";
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 
-const Footer = ({ customFontMontserrat }) => {
+const Footer = ({ fontMontserrat }) => {
   return (
     <View style={styles.container}>
-      <Text style={[styles.text, { fontFamily: customFontMontserrat }]}>
+      <Text style={[styles.text, { fontFamily: fontMontserrat }]}>
         &copy; GIFOS 2023 All Rights Reserved.
       </Text>
-      <Text style={[styles.text2, { fontFamily: customFontMontserrat }]}>
+      <Text style={[styles.text2, { fontFamily: fontMontserrat }]}>
         Compartir en:
       </Text>
       <Text style={styles.textIcons}>

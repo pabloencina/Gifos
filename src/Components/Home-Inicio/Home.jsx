@@ -5,18 +5,16 @@ import Search from "./Search";
 import Trending from "./Trending";
 import TrendingGifos from "./TrendingGifos";
 
-const Home = ({ customFontMontserrat, customFont }) => {
+const Home = ({ fontRoboto, fontMontserrat }) => {
   return (
     <ScrollView>
       <View style={styles.container}>
-        <Text style={[styles.text, { fontFamily: customFontMontserrat }]}>
+        <Text style={[styles.text, { fontFamily: fontMontserrat }]}>
           Inspirate, busca, guarda,
         </Text>
-        <Text style={[styles.text, { fontFamily: customFontMontserrat }]}>
+        <Text style={[styles.text, { fontFamily: fontMontserrat }]}>
           y crea los mejores{" "}
-          <Text
-            style={[styles.colorGifos, { fontFamily: customFontMontserrat }]}
-          >
+          <Text style={[styles.colorGifos, { fontFamily: fontMontserrat }]}>
             GIFOS
           </Text>
         </Text>
@@ -26,8 +24,8 @@ const Home = ({ customFontMontserrat, customFont }) => {
         />
         <Search />
 
-        <Trending customFont={customFont} />
-        <TrendingGifos customFont={customFont} />
+        <Trending fontRoboto={fontRoboto} />
+        <TrendingGifos fontRoboto={fontRoboto} />
       </View>
     </ScrollView>
   );

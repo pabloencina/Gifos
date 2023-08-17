@@ -10,7 +10,7 @@ import {
 import dataGift from "../../Data/dataGift";
 import theme from "../../Styles/Theme/theme";
 
-const CardGift = () => {
+const CardGift = ({ fontRoboto }) => {
   return (
     <FlatList
       numColumns={2}
@@ -22,7 +22,9 @@ const CardGift = () => {
               style={styles.image}
               source={require("../../Assets/Images/image.jpg")}
             />
-            <Text style={styles.text}>{gift.name}</Text>
+            <Text style={[styles.text, { fontFamily: fontRoboto }]}>
+              {gift.name}
+            </Text>
           </View>
         );
       }}

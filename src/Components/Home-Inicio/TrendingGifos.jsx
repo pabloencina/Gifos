@@ -3,14 +3,14 @@ import { FlatList, Image, StyleSheet, Text, View } from "react-native";
 import theme from "../../Styles/Theme/theme";
 import dataGift from "../../Data/dataGift";
 
-const TrendingGifos = ({ customFont }) => {
+const TrendingGifos = ({ fontRoboto }) => {
   return (
     <View style={{ flex: 1 }}>
       <View style={styles.containerText}>
-        <Text style={[styles.title, { fontFamily: customFont }]}>
+        <Text style={[styles.title, { fontFamily: fontRoboto }]}>
           Trending GIFOS
         </Text>
-        <Text style={[styles.text, { fontFamily: customFont }]}>
+        <Text style={[styles.text, { fontFamily: fontRoboto }]}>
           Mira los últimos GIFOS de nuestra comunidad.
         </Text>
       </View>

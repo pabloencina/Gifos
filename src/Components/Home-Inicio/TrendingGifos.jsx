@@ -42,8 +42,8 @@ const styles = StyleSheet.create({
     backgroundColor: "cornflowerblue",
   },
   container: {
-    height: 200,
-    justifyContent: "flex-end",
+    height: 300,
+    justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
     padding: 5,

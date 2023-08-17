@@ -18,7 +18,7 @@ export default Trending;
 
 const styles = StyleSheet.create({
   container: {
-    height: 180,
+    height: 140,
     justifyContent: "flex-end",
     alignItems: "center",
     //flex: 1,

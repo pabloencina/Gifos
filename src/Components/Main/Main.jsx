@@ -9,7 +9,7 @@ const Main = () => {
     <View>
       <AppBar />
       <Home />
-      <CardGift />
+      {/* <CardGift /> */}
     </View>
   );
 };

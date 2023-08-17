@@ -1,5 +1,5 @@
 import React from "react";
-import { FlatList, Image, StyleSheet, Text, View } from "react-native";
+import { ScrollView, Image, StyleSheet, Text, View } from "react-native";
 import theme from "../../Styles/Theme/theme";
 import Search from "./Search";
 import Trending from "./Trending";
@@ -7,20 +7,22 @@ import TrendingGifos from "./TrendingGifos";
 
 const Home = () => {
   return (
-    <View style={styles.container}>
-      {/* <Text style={styles.text}>Inspirate, busca, guarda,</Text>
-      <Text style={styles.text}>
-        y crea los mejores <Text style={styles.colorGifos}>GIFOS</Text>
-      </Text>
-      <Image
-        style={styles.image}
-        source={require("../../Images/Image-principal.png")}
-      />
-      <Search />
+    <ScrollView>
+      <View style={styles.container}>
+        <Text style={styles.text}>Inspirate, busca, guarda,</Text>
+        <Text style={styles.text}>
+          y crea los mejores <Text style={styles.colorGifos}>GIFOS</Text>
+        </Text>
+        <Image
+          style={styles.image}
+          source={require("../../Images/Image-principal.png")}
+        />
+        <Search />
 
-      <Trending /> */}
-      <TrendingGifos />
-    </View>
+        <Trending />
+        <TrendingGifos />
+      </View>
+    </ScrollView>
   );
 };
 
@@ -30,7 +32,7 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
     alignItems: "center",
-    //flex: 1,
+    //flex: 0,
     marginTop: 20,
   },
   text: {

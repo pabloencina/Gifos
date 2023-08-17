@@ -5,6 +5,7 @@ const theme = {
     primary: "#572ee5",
     secondary: "#5ed7c6",
     tertiary: "#37383c",
+    quaternary: "cornflowerblue",
     whiteColor: "#fff",
     blackColor: "#000",
   },
@@ -14,7 +15,7 @@ const theme = {
     title2: 20,
   },
   fonts: {
-    main: "system",
+    //main: "system",
   },
   fontWeights: {
     normal: "400",

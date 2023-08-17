@@ -19,7 +19,7 @@ const { width } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: theme.color.primary,
+    backgroundColor: theme.color.quaternary,
     width: width,
     height: 80,
     marginTop: 20,
@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
   text: {
     color: theme.color.whiteColor,
     fontSize: theme.fontSizes.text,
+    //fontFamily: theme.fonts.main,
   },
   image: {
     width: 50,

@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     height: 100,
-    backgroundColor: "cornflowerblue",
+    backgroundColor: theme.color.secondary,
   },
   container: {
     height: 300,
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "column",
     padding: 5,
-    backgroundColor: "cornflowerblue",
+    backgroundColor: theme.color.secondary,
     borderColor: theme.color.blackColor,
   },
   title: {

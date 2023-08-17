@@ -8,7 +8,7 @@ import TrendingGifos from "./TrendingGifos";
 const Home = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Inspirate, busca, guarda,</Text>
+      {/* <Text style={styles.text}>Inspirate, busca, guarda,</Text>
       <Text style={styles.text}>
         y crea los mejores <Text style={styles.colorGifos}>GIFOS</Text>
       </Text>
@@ -18,7 +18,7 @@ const Home = () => {
       />
       <Search />
 
-      <Trending />
+      <Trending /> */}
       <TrendingGifos />
     </View>
   );

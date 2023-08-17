@@ -6,8 +6,16 @@ import dataGift from "../../Data/dataGift";
 const TrendingGifos = () => {
   return (
     <View style={{ flex: 1 }}>
-      <Text style={styles.title}>Trending GIFOS</Text>
+      <View style={styles.containerText}>
+        <Text style={styles.title}>Trending GIFOS</Text>
+        <Text style={styles.text}>
+          Mira los últimos GIFOS de nuestra comunidad.
+        </Text>
+      </View>
+
       <FlatList
+        horizontal={true} // Set horizontal to true
+        pagingEnabled={true} // Enable paging for smooth sliding
         data={dataGift}
         renderItem={({ item: gift }) => {
           return (
@@ -16,7 +24,6 @@ const TrendingGifos = () => {
                 style={styles.image}
                 source={require("../../Images/image.jpg")}
               />
-              <Text style={styles.text}>{gift.name}</Text>
             </View>
           );
         }}
@@ -28,20 +35,35 @@ const TrendingGifos = () => {
 export default TrendingGifos;
 
 const styles = StyleSheet.create({
+  containerText: {
+    justifyContent: "center",
+    alignItems: "center",
+    height: 100,
+    backgroundColor: "cornflowerblue",
+  },
   container: {
-    height: 180,
+    height: 200,
     justifyContent: "flex-end",
     alignItems: "center",
+    flexDirection: "column",
+    padding: 5,
+    backgroundColor: "cornflowerblue",
+    borderColor: theme.color.blackColor,
   },
   title: {
-    color: theme.color.primary,
+    color: theme.color.whiteColor,
     fontSize: theme.fontSizes.title,
     fontWeight: theme.fontWeights.bold,
+    marginBottom: 5,
   },
   text: {
-    color: theme.color.primary,
+    color: theme.color.whiteColor,
     fontSize: theme.fontSizes.text,
     marginTop: 20,
     padding: 10,
+  },
+  image: {
+    width: 180,
+    height: 180,
   },
 });

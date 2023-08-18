@@ -8,7 +8,7 @@ export default function App() {
   const fontsLoaded = useCustomFonts(fontsToLoad);
 
   if (!fontsLoaded) {
-    return null; // or a loading screen
+    return null;
   }
 
   return (

@@ -1,27 +1,37 @@
 import React, { useState } from "react";
-import { StyleSheet, TextInput, View } from "react-native";
+import { StyleSheet, Text, TextInput, View } from "react-native";
 import theme from "../../Styles/Theme/theme";
-import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 
-const Search = () => {
-  const [text, setText] = useState(""); // Estado para almacenar el valor del texto
+const Search = ({ setCategory }) => {
+  const [value, setValue] = useState("");
+  const [error, setError] = useState(false);
 
-  const handleTextChange = (newText) => {
-    setText(newText); // Actualiza el estado con el nuevo texto ingresado
+  const handleSearchGif = () => {
+    if (value === "") {
+      setError(true);
+      //setValue(value);
+      return;
+    }
+    setValue("");
   };
 
   return (
     <View style={styles.container}>
+      <Text>{value}</Text>
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.input}
-          value={text}
-          onChangeText={handleTextChange}
+          value={value}
+          onChangeText={(newValue) => {
+            setError(false);
+            setCategory(value);
+            setValue(newValue);
+          }}
           placeholder="Busca GIFOS y más"
-        >
-          <FontAwesomeIcon style={styles.searchIcon} name="search" size={30} />
-        </TextInput>
+          onSubmitEditing={handleSearchGif}
+        />
       </View>
+      {error && <Text>El campo no puede estar vació</Text>}
     </View>
   );
 };
@@ -41,12 +51,9 @@ const styles = StyleSheet.create({
     width: 300,
     height: 50,
     alignItems: "center", // Alinea verticalmente en el centro
-    paddingLeft: 250,
+    paddingLeft: 50,
   },
   input: {
-    flex: 1,
-  },
-  searchIcon: {
-    color: theme.color.quaternary,
+    width: 300,
   },
 });

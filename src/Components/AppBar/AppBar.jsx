@@ -7,7 +7,7 @@ const AppBar = ({ fontRoboto }) => {
     <View style={styles.container}>
       <Image
         style={styles.image}
-        source={require("../../Assets/Images/image.jpg")}
+        source={require("../../Assets/Images/logo.png")}
       />
 
       <Text style={[styles.text, { fontFamily: fontRoboto }]}>
@@ -24,7 +24,7 @@ const { width } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: theme.color.quaternary,
+    backgroundColor: theme.color.whiteColor,
     width: width,
     height: 80,
     marginTop: 20,
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     padding: 15,
   },
   text: {
-    color: theme.color.whiteColor,
+    color: theme.color.primary,
     fontSize: theme.fontSizes.text,
     fontWeight: theme.fontWeights.bold,
   },

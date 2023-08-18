@@ -24,8 +24,11 @@ const Home = ({ fontRoboto, fontMontserrat }) => {
         />
         <Search />
 
-        <Trending fontRoboto={fontRoboto} />
-        <TrendingGifos fontRoboto={fontRoboto} />
+        <Trending fontRoboto={fontRoboto} fontMontserrat={fontMontserrat} />
+        <TrendingGifos
+          fontRoboto={fontRoboto}
+          fontMontserrat={fontMontserrat}
+        />
       </View>
     </ScrollView>
   );

@@ -12,14 +12,16 @@ const Search = () => {
 
   return (
     <View style={styles.container}>
-      <TextInput
-        style={styles.input}
-        value={text}
-        onChangeText={handleTextChange}
-        placeholder="Busca GIFOS y más"
-      >
-        <FontAwesomeIcon style={styles.searchIcon} name="search" size={30} />
-      </TextInput>
+      <View style={styles.inputContainer}>
+        <TextInput
+          style={styles.input}
+          value={text}
+          onChangeText={handleTextChange}
+          placeholder="Busca GIFOS y más"
+        >
+          <FontAwesomeIcon style={styles.searchIcon} name="search" size={30} />
+        </TextInput>
+      </View>
     </View>
   );
 };
@@ -30,17 +32,21 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
     alignItems: "center",
-    //flex: 1,
   },
-  input: {
-    borderColor: theme.color.primary,
+  inputContainer: {
+    flexDirection: "row", // Alinea los elementos horizontalmente
+    borderColor: theme.color.quaternary,
     borderRadius: 25,
     borderWidth: 1,
     width: 300,
     height: 50,
-    paddingLeft: 30,
+    alignItems: "center", // Alinea verticalmente en el centro
+    paddingLeft: 250,
+  },
+  input: {
+    flex: 1,
   },
   searchIcon: {
-    color: theme.color.primary,
+    color: theme.color.quaternary,
   },
 });

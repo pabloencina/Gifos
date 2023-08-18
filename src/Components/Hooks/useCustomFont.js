@@ -6,7 +6,7 @@ const useCustomFonts = () => {
 
   const loadFonts = async () => {
     await Font.loadAsync({
-      Montserrat: require("../../../assets/MontserratAlternates-ExtraLight.ttf"),
+      Montserrat: require("../../../assets/MontserratAlternates-Italic.ttf"),
       Roboto: require("../../../assets/RobotoCondensed-Bold.ttf"),
     });
     setFontsLoaded(true);

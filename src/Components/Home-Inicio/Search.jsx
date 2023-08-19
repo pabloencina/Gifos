@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, TextInput, View } from "react-native";
+import { Image, StyleSheet, Text, TextInput, View } from "react-native";
 import theme from "../../Styles/Theme/theme";
 
 const Search = ({ setCategory }) => {
@@ -30,7 +30,11 @@ const Search = ({ setCategory }) => {
           onSubmitEditing={handleSearchGif}
         />
       </View>
-      {error && <Text>El campo no puede estar vació</Text>}
+      {error && (
+        <Image
+          source={require("../../../src/Assets/Images/Images-sin-resultados.png")}
+        />
+      )}
     </View>
   );
 };

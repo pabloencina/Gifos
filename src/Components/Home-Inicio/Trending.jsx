@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import theme from "../../Styles/Theme/theme";
 import useApi from "../Hooks/useApi";
 
@@ -20,14 +20,20 @@ const Trending = ({ fontRoboto, fontMontserrat }) => {
       <View style={styles.textContainer}>
         {data.map((trend, index) => {
           return (
-            <Text
+            <TouchableOpacity
               key={trend.id}
-              style={[styles.textWrapper, { fontFamily: fontMontserrat }]}
+              style={styles.textWrapper}
+              onPress={() => {
+                // Aquí puedes realizar la acción deseada al hacer clic en el texto
+                console.log(`Clic en el elemento ${trend.title}`);
+              }}
             >
-              {index !== data.length - 1
-                ? trend.title + ", "
-                : trend.title + ". "}
-            </Text>
+              <Text style={[styles.text, { fontFamily: fontMontserrat }]}>
+                {index !== data.length - 1
+                  ? trend.title + ", "
+                  : trend.title + ". "}
+              </Text>
+            </TouchableOpacity>
           );
         })}
       </View>

@@ -12,7 +12,7 @@ import theme from "../../Styles/Theme/theme";
 import useApi from "../Hooks/useApi";
 
 const CardGift = ({ fontRoboto, category }) => {
-  const url = `https://api.giphy.com/v1/gifs/search?api_key=Tj8JKaeKhEJjgbgXJ4V3SDC7647ujluy&q=${category}&limit=5`;
+  const url = `https://api.giphy.com/v1/gifs/search?api_key=Tj8JKaeKhEJjgbgXJ4V3SDC7647ujluy&q=${category}&limit=15`;
   const { loading, data } = useApi(url);
   console.log(data);
   return (

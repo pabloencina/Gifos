@@ -1,15 +1,28 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import theme from "../../Styles/Theme/theme";
+import useApi from "../Hooks/useApi";
 
 const Trending = ({ fontRoboto, fontMontserrat }) => {
+  const url = `https://api.giphy.com/v1/gifs/trending?api_key=Tj8JKaeKhEJjgbgXJ4V3SDC7647ujluy&limit=10`;
+  const { loading, data } = useApi(url);
+  console.log(data);
+  if (data === null) {
+    return null; // O puedes mostrar un mensaje de carga, por ejemplo
+  }
   return (
     <View style={styles.container}>
-      <Text style={[styles.title, { fontFamily: fontRoboto }]}>Trending:</Text>
-      <Text style={[styles.text, { fontFamily: fontMontserrat }]}>
-        Anthony Davis, Kodak Black, Michel Jackson, Bust, Scammers, Autumn, Rat,
-        Grinch, Picture, Chair, Sweet Dreams, Show.{" "}
-      </Text>
+      {/* <Text style={[styles.title, { fontFamily: fontRoboto }]}>Trending:</Text>
+      {data.map((trend) => {
+        return (
+          <Text
+            key={trend.id}
+            style={[styles.text, { fontFamily: fontMontserrat }]}
+          >
+            {trend.title}
+          </Text>
+        );
+      })} */}
     </View>
   );
 };

@@ -2,8 +2,11 @@ import React from "react";
 import { FlatList, Image, StyleSheet, Text, View } from "react-native";
 import theme from "../../Styles/Theme/theme";
 import dataGift from "../../Data/dataGift";
+import useApi from "../Hooks/useApi";
 
 const TrendingGifos = ({ fontRoboto }) => {
+  const url = `https://api.giphy.com/v1/gifs/trending?api_key=Tj8JKaeKhEJjgbgXJ4V3SDC7647ujluy&limit=10`;
+  const { loading, data } = useApi(url);
   return (
     <View style={{ flex: 1 }}>
       <View style={styles.containerText}>
@@ -18,13 +21,13 @@ const TrendingGifos = ({ fontRoboto }) => {
       <FlatList
         horizontal={true} // Set horizontal to true
         pagingEnabled={true} // Enable paging for smooth sliding
-        data={dataGift}
+        data={data}
         renderItem={({ item: gift }) => {
           return (
             <View style={styles.container} key={gift.id}>
               <Image
+                source={{ uri: gift.images.downsized_medium.url }}
                 style={styles.image}
-                source={require("../../Assets/Images/image.jpg")}
               />
             </View>
           );

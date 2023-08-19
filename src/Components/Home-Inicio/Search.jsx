@@ -9,7 +9,7 @@ const Search = ({ setCategory }) => {
   const handleSearchGif = () => {
     if (value === "") {
       setError(true);
-      //setValue(value);
+      setValue(value);
       return;
     }
     setValue("");
@@ -17,7 +17,6 @@ const Search = ({ setCategory }) => {
 
   return (
     <View style={styles.container}>
-      <Text>{value}</Text>
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.input}

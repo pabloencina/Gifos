@@ -5,18 +5,18 @@ const useApi = (url) => {
   const [loading, setLoading] = useState(false);
 
   const fetchApi = () => {
-    setLoading(true);
+    //setLoading(true);
     fetch(url)
       .then((resp) => resp.json())
       .then((respJson) => {
         setLoading(true);
         setData(respJson.data);
 
-        console.log("RESPUESTA" + respJson.data);
+        console.log("RESPUESTA", JSON.stringify(respJson));
       })
       .catch((error) => {
         console.log(error);
-        setLoading(false); // En caso de error, asegúrate de cambiar loading a false
+        //setLoading(false); // En caso de error, asegúrate de cambiar loading a false
       });
   };
 

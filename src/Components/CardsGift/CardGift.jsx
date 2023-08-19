@@ -7,23 +7,28 @@ import {
   Text,
   View,
 } from "react-native";
-import dataGift from "../../Data/dataGift";
-import theme from "../../Styles/Theme/theme";
 
-const CardGift = ({ fontRoboto }) => {
+import theme from "../../Styles/Theme/theme";
+import useApi from "../Hooks/useApi";
+
+const CardGift = ({ fontRoboto, category }) => {
+  const url = `https://api.giphy.com/v1/gifs/search?api_key=Tj8JKaeKhEJjgbgXJ4V3SDC7647ujluy&q=${category}&limit=5`;
+  const { loading, data } = useApi(url);
+  console.log(data);
   return (
     <FlatList
       numColumns={2}
-      data={dataGift}
+      data={data}
       renderItem={({ item: gift }) => {
         return (
           <View style={styles.container} key={gift.id}>
             <Image
+              source={{ uri: gift.images.downsized_medium.url }}
               style={styles.image}
-              source={require("../../Assets/Images/image.jpg")}
             />
+
             <Text style={[styles.text, { fontFamily: fontRoboto }]}>
-              {gift.name}
+              {gift.title}
             </Text>
           </View>
         );
@@ -40,7 +45,7 @@ const styles = StyleSheet.create({
     padding: 15,
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 50,
+    //marginTop: 50,
   },
   image: {
     width: 170,

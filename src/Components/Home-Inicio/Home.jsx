@@ -4,8 +4,9 @@ import theme from "../../Styles/Theme/theme";
 import Search from "./Search";
 import Trending from "./Trending";
 import TrendingGifos from "./TrendingGifos";
+import CardGift from "../CardsGift/CardGift";
 
-const Home = ({ fontRoboto, fontMontserrat }) => {
+const Home = ({ fontRoboto, fontMontserrat, setCategory, category }) => {
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -22,8 +23,8 @@ const Home = ({ fontRoboto, fontMontserrat }) => {
           style={styles.image}
           source={require("../../Assets/Images/Image-principal.png")}
         />
-        <Search />
-
+        <Search setCategory={setCategory} />
+        <CardGift fontRoboto={fontRoboto} category={category} />
         <Trending fontRoboto={fontRoboto} fontMontserrat={fontMontserrat} />
         <TrendingGifos
           fontRoboto={fontRoboto}

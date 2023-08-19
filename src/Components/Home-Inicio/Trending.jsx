@@ -12,17 +12,25 @@ const Trending = ({ fontRoboto, fontMontserrat }) => {
   }
   return (
     <View style={styles.container}>
-      {/* <Text style={[styles.title, { fontFamily: fontRoboto }]}>Trending:</Text>
-      {data.map((trend) => {
-        return (
-          <Text
-            key={trend.id}
-            style={[styles.text, { fontFamily: fontMontserrat }]}
-          >
-            {trend.title}
-          </Text>
-        );
-      })} */}
+      <View style={styles.containerTrending}>
+        <Text style={[styles.title, { fontFamily: fontRoboto }]}>
+          Trending:
+        </Text>
+      </View>
+      <View style={styles.textContainer}>
+        {data.map((trend, index) => {
+          return (
+            <Text
+              key={trend.id}
+              style={[styles.textWrapper, { fontFamily: fontMontserrat }]}
+            >
+              {index !== data.length - 1
+                ? trend.title + ", "
+                : trend.title + ". "}
+            </Text>
+          );
+        })}
+      </View>
     </View>
   );
 };
@@ -31,20 +39,33 @@ export default Trending;
 
 const styles = StyleSheet.create({
   container: {
-    height: 140,
-    justifyContent: "flex-end",
+    flex: 1,
+    backgroundColor: "white",
+    padding: 15,
+  },
+  containerTrending: {
+    height: 70,
+    justifyContent: "center",
     alignItems: "center",
-    //flex: 1,
   },
   title: {
     color: theme.color.primary,
     fontSize: theme.fontSizes.title,
     fontWeight: theme.fontWeights.bold,
   },
+  textContainer: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    alignItems: "center",
+    padding: 15,
+  },
+  textWrapper: {
+    marginRight: 10,
+  },
   text: {
     color: theme.color.blackColor,
     fontSize: theme.fontSizes.text,
-    marginTop: 20,
-    padding: 10,
+    //marginTop: 20,
+    //padding: 10,
   },
 });

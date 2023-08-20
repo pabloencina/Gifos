@@ -2,13 +2,13 @@
 import { StyleSheet, TouchableOpacity, View } from "react-native";
 import theme from "../../Styles/Theme/theme";
 
-const BtnVerMas = ({ fontRoboto }) => {
+const BtnVerMas = ({ fontRoboto, handleLoadMore }) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity
         //activeOpacity={0.6}
         style={[styles.button, { fontFamily: fontRoboto }]}
-        onPress={() => alert("Pressed!")}
+        onPress={() => handleLoadMore()}
       >
         VER MÁS
       </TouchableOpacity>

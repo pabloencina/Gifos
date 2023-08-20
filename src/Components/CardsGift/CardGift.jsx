@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Dimensions,
   FlatList,
@@ -13,16 +13,23 @@ import useApi from "../Hooks/useApi";
 import BtnVerMas from "./BtnVerMas";
 
 const CardGift = ({ fontRoboto, category }) => {
-  const url = `https://api.giphy.com/v1/gifs/search?api_key=Tj8JKaeKhEJjgbgXJ4V3SDC7647ujluy&q=${category}&limit=10`;
+  const [offset, setOffset] = useState(0);
+  const limit = 10;
+  const url = `https://api.giphy.com/v1/gifs/search?api_key=Tj8JKaeKhEJjgbgXJ4V3SDC7647ujluy&q=${category}&limit=${limit}&offset=${offset}`;
   const { loading, data } = useApi(url);
-  console.log(data);
+
+  const handleLoadMore = () => {
+    setOffset(offset + limit);
+  };
   return (
     <View>
       <FlatList
+        //initialNumToRender={10}
+        //windowSize={5}
         numColumns={2}
         data={data}
         renderItem={({ item: gift }) => (
-          <View style={styles.container} key={gift.id}>
+          <View style={styles.container}>
             <Image
               key={gift.id}
               source={{ uri: gift.images.downsized_medium.url }}
@@ -35,7 +42,9 @@ const CardGift = ({ fontRoboto, category }) => {
           </View>
         )}
       />
-      {data && data.length > 0 && <BtnVerMas fontRoboto={fontRoboto} />}
+      {data && data.length > 0 && (
+        <BtnVerMas handleLoadMore={handleLoadMore} fontRoboto={fontRoboto} />
+      )}
     </View>
   );
 };

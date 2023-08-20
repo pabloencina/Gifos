@@ -17,7 +17,7 @@ const Trending = ({ fontRoboto, fontMontserrat }) => {
           Trending:
         </Text>
       </View>
-      {/* <View style={styles.textContainer}>
+      <View style={styles.textContainer}>
         {data.map((trend, index) => {
           return (
             <TouchableOpacity
@@ -35,7 +35,7 @@ const Trending = ({ fontRoboto, fontMontserrat }) => {
             </TouchableOpacity>
           );
         })}
-      </View> */}
+      </View>
     </View>
   );
 };

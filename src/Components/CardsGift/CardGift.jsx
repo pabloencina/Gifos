@@ -24,6 +24,7 @@ const CardGift = ({ fontRoboto, category }) => {
         renderItem={({ item: gift }) => (
           <View style={styles.container} key={gift.id}>
             <Image
+              key={gift.id}
               source={{ uri: gift.images.downsized_medium.url }}
               style={styles.image}
             />
@@ -34,9 +35,7 @@ const CardGift = ({ fontRoboto, category }) => {
           </View>
         )}
       />
-      <View style={{ height: 100 }}>
-        <BtnVerMas />
-      </View>
+      {data && data.length > 0 && <BtnVerMas fontRoboto={fontRoboto} />}
     </View>
   );
 };

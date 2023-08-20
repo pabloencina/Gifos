@@ -1,27 +1,37 @@
 // import React from "react";
-import { Image, TouchableHighlight, StyleSheet } from "react-native";
+import { StyleSheet, TouchableOpacity, View } from "react-native";
+import theme from "../../Styles/Theme/theme";
 
-const BtnVerMas = () => {
+const BtnVerMas = ({ fontRoboto }) => {
   return (
-    <TouchableHighlight style={styles.button}>
-      <Image
-        source={require("../../../src/Assets/Images/ImageBtnVerMas.png")}
-        style={styles.image}
-      />
-    </TouchableHighlight>
+    <View style={styles.container}>
+      <TouchableOpacity
+        //activeOpacity={0.6}
+        style={[styles.button, { fontFamily: fontRoboto }]}
+        onPress={() => alert("Pressed!")}
+      >
+        VER MÁS
+      </TouchableOpacity>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  button: {
-    //backgroundColor: "blue", // Puedes cambiar el color de fondo como desees
-    // padding: 10,
-    // borderRadius: 5,
-    // alignSelf: "center",
+  container: {
+    height: 80,
+    justifyContent: "center",
+    alignItems: "center",
   },
-  image: {
-    width: 160,
-    height: 50,
+  button: {
+    width: 110,
+    height: 40,
+    color: theme.color.primary,
+    borderWidth: 1,
+    borderColor: theme.color.primary,
+    borderRadius: 20,
+    alignSelf: "center",
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
 

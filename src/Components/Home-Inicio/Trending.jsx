@@ -17,14 +17,13 @@ const Trending = ({ fontRoboto, fontMontserrat }) => {
           Trending:
         </Text>
       </View>
-      <View style={styles.textContainer}>
+      {/* <View style={styles.textContainer}>
         {data.map((trend, index) => {
           return (
             <TouchableOpacity
               key={trend.id}
               style={styles.textWrapper}
               onPress={() => {
-                // Aquí puedes realizar la acción deseada al hacer clic en el texto
                 console.log(`Clic en el elemento ${trend.title}`);
               }}
             >
@@ -36,7 +35,7 @@ const Trending = ({ fontRoboto, fontMontserrat }) => {
             </TouchableOpacity>
           );
         })}
-      </View>
+      </View> */}
     </View>
   );
 };

@@ -1,5 +1,5 @@
 // import React from "react";
-import { StyleSheet, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import theme from "../../Styles/Theme/theme";
 
 const BtnVerMas = ({ fontRoboto, handleLoadMore }) => {
@@ -10,7 +10,7 @@ const BtnVerMas = ({ fontRoboto, handleLoadMore }) => {
         style={[styles.button, { fontFamily: fontRoboto }]}
         onPress={() => handleLoadMore()}
       >
-        VER MÁS
+        <Text> VER MÁS</Text>
       </TouchableOpacity>
     </View>
   );

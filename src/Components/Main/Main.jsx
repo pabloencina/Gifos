@@ -16,7 +16,7 @@ const Main = ({ fontRoboto, fontMontserrat }) => {
         setCategory={setCategory}
         category={category}
       />
-      {/* <CardGift fontRoboto={fontRoboto} category={category} /> */}
+      <CardGift fontRoboto={fontRoboto} category={category} />
       <Footer fontMontserrat={fontMontserrat} />
     </View>
   );

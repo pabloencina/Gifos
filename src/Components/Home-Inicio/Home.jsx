@@ -1,9 +1,8 @@
 import React from "react";
-import { ScrollView, Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 import theme from "../../Styles/Theme/theme";
 import Search from "./Search";
 import Trending from "./Trending";
-import TrendingGifos from "./TrendingGifos";
 import CardGift from "../CardsGift/CardGift";
 
 const Home = ({ fontRoboto, fontMontserrat, setCategory, category }) => {
@@ -25,7 +24,6 @@ const Home = ({ fontRoboto, fontMontserrat, setCategory, category }) => {
       <Search setCategory={setCategory} />
       <CardGift fontRoboto={fontRoboto} category={category} />
       <Trending fontRoboto={fontRoboto} fontMontserrat={fontMontserrat} />
-      <TrendingGifos fontRoboto={fontRoboto} fontMontserrat={fontMontserrat} />
     </View>
   );
 };

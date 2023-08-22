@@ -28,16 +28,16 @@ const CardGift = ({ fontRoboto, category }) => {
         //windowSize={5}
         numColumns={2}
         data={data}
-        renderItem={({ item: gift }) => (
+        renderItem={({ item }) => (
           <View style={styles.container}>
             <Image
-              key={gift.id}
-              source={{ uri: gift.images.downsized_medium.url }}
+              key={item.id}
+              source={{ uri: item.images.downsized_medium.url }}
               style={styles.image}
             />
 
             <Text style={[styles.text, { fontFamily: fontRoboto }]}>
-              {gift.title}
+              {item.title}
             </Text>
           </View>
         )}

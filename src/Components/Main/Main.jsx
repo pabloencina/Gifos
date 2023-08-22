@@ -4,6 +4,7 @@ import AppBar from "../AppBar/AppBar";
 import CardGift from "../CardsGift/CardGift";
 import Home from "../Home-Inicio/Home";
 import Footer from "../Footer/Footer";
+import TrendingGifos from "../Home-Inicio/TrendingGifos";
 
 const Main = ({ fontRoboto, fontMontserrat }) => {
   const [category, setCategory] = useState("");
@@ -17,6 +18,7 @@ const Main = ({ fontRoboto, fontMontserrat }) => {
         category={category}
       />
       <CardGift fontRoboto={fontRoboto} category={category} />
+      <TrendingGifos fontRoboto={fontRoboto} fontMontserrat={fontMontserrat} />
       <Footer fontMontserrat={fontMontserrat} />
     </View>
   );

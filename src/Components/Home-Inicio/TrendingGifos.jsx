@@ -1,7 +1,6 @@
 import React from "react";
 import { FlatList, Image, StyleSheet, Text, View } from "react-native";
 import theme from "../../Styles/Theme/theme";
-import dataGift from "../../Data/dataGift";
 import useApi from "../Hooks/useApi";
 
 const TrendingGifos = ({ fontRoboto }) => {
@@ -20,13 +19,13 @@ const TrendingGifos = ({ fontRoboto }) => {
 
       <FlatList
         horizontal={true} // Set horizontal to true
-        pagingEnabled={true} // Enable paging for smooth sliding
+        //pagingEnabled={true} // Enable paging for smooth sliding
         data={data}
-        renderItem={({ item: gift }) => {
+        renderItem={({ item }) => {
           return (
-            <View style={styles.container} key={gift.id}>
+            <View style={styles.container} key={item.id}>
               <Image
-                source={{ uri: gift.images.downsized_medium.url }}
+                source={{ uri: item.images.downsized_medium.url }}
                 style={styles.image}
               />
             </View>

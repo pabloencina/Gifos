@@ -8,30 +8,25 @@ import CardGift from "../CardsGift/CardGift";
 
 const Home = ({ fontRoboto, fontMontserrat, setCategory, category }) => {
   return (
-    <ScrollView>
-      <View style={styles.container}>
-        <Text style={[styles.text, { fontFamily: fontMontserrat }]}>
-          Inspirate, busca, guarda,
+    <View style={styles.container}>
+      <Text style={[styles.text, { fontFamily: fontMontserrat }]}>
+        Inspirate, busca, guarda,
+      </Text>
+      <Text style={[styles.text, { fontFamily: fontMontserrat }]}>
+        y crea los mejores{" "}
+        <Text style={[styles.colorGifos, { fontFamily: fontMontserrat }]}>
+          GIFOS
         </Text>
-        <Text style={[styles.text, { fontFamily: fontMontserrat }]}>
-          y crea los mejores{" "}
-          <Text style={[styles.colorGifos, { fontFamily: fontMontserrat }]}>
-            GIFOS
-          </Text>
-        </Text>
-        <Image
-          style={styles.image}
-          source={require("../../Assets/Images/Image-principal.png")}
-        />
-        <Search setCategory={setCategory} />
-        <CardGift fontRoboto={fontRoboto} category={category} />
-        <Trending fontRoboto={fontRoboto} fontMontserrat={fontMontserrat} />
-        <TrendingGifos
-          fontRoboto={fontRoboto}
-          fontMontserrat={fontMontserrat}
-        />
-      </View>
-    </ScrollView>
+      </Text>
+      <Image
+        style={styles.image}
+        source={require("../../Assets/Images/Image-principal.png")}
+      />
+      <Search setCategory={setCategory} />
+      <CardGift fontRoboto={fontRoboto} category={category} />
+      <Trending fontRoboto={fontRoboto} fontMontserrat={fontMontserrat} />
+      <TrendingGifos fontRoboto={fontRoboto} fontMontserrat={fontMontserrat} />
+    </View>
   );
 };
 
